@@ -9,8 +9,8 @@ LunchCheckController.$inject = ['$scope'];
 	
 	$scope.sayMessage = function () {
 		$scope.list = $scope.itemlist.split(',').length ;
-    if($scope.list==0) {$scope.message = 'Enter Data first';} 
-		else if ($scope.list<=3) {$scope.message = 'Enjoy';} 
+    if($scope.list) {$scope.message = 'Enter Data first';} 
+	else if ($scope.list<=3) {$scope.message = 'Enjoy';} 
     else if($scope.list>=3) {$scope.message = 'Too Much !!!';}
   };
   $scope.printMessage = function () {
